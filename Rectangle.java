@@ -59,6 +59,12 @@ public class Rectangle {
     width = newWidth;
   }
 
+    // Return a description of a rectangle in the form of
+  // Rectangle[x=*,y=*,w=*,h=*]
+  public String toString(){
+  return "Rectangle[x="+originX+",y="+originY+",w="+width+",h="+height+"]";
+  }
+
   // method: move the rectangle
   public void move(double dx, double dy) {
 	   originX += dx;
