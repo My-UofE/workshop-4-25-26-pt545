@@ -2,10 +2,10 @@
 public class Rectangle {
   
   // 4 instance attributes
-  public double width;
-  public double height;
-  public double originX = 0.0;
-  public double originY = 0.0;
+  private double width;
+  private double height;
+  private double originX = 0.0;
+  private double originY = 0.0;
 
 
   // 1 static attributes
@@ -29,6 +29,36 @@ public class Rectangle {
     this(1,1,0,0);
   }
 
+  public double getX(){
+    return originX;
+  }
+  public double getY(){
+    return originY;
+  }
+  public double getHeight(){
+    return height;
+  }
+  public double getWidth(){
+    return width;
+  }
+
+  public void setX(double newX){
+    if(newX>0)
+    originX = newX;
+  }
+  public void setY(double newY){
+    if(newY>0)
+    originY = newY;
+  }
+  public void setHeight(double newHeight){
+    if(newHeight>0)
+    height = newHeight;
+  }
+  public void setWidth(double newWidth){
+    if(newWidth>0)
+    width = newWidth;
+  }
+
   // method: move the rectangle
   public void move(double dx, double dy) {
 	   originX += dx;
@@ -40,6 +70,7 @@ public class Rectangle {
     return width * height;
   }
   
+
   // method: compute the area of the rectangle
   public double getPerimeter() {
     return 2 * (width + height);
